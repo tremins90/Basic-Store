@@ -38,6 +38,7 @@ public class ProductServiceImpl implements ProductService {
     public ProductDTO findById(Long id) {
         Product product = productRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Product", "id", id));
         return mapDto(product);
+
     }
 
     @Override
